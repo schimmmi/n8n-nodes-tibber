@@ -49,6 +49,10 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.0.6 (2025-08-05)
+- Fixed file paths in index.ts to match actual compiled structure in dist/src/
+- Corrected sourcePath references to resolve package loading issues
+
 ### 1.0.5 (2025-08-05)
 - Fixed module exports to use CommonJS format required by n8n community nodes
 - Updated index.ts to export nodes and credentials arrays with proper structure
