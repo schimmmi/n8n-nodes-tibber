@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-tibber",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "n8n node to access Tibber API data",
   "keywords": [
     "n8n",
@@ -40,14 +40,9 @@
   "files": [
     "dist"
   ],
-  "n8n": {
-    "n8nNodesApiVersion": 1,
-    "credentials": [
-      "dist/src/credentials/TibberApi.credentials.js"
-    ],
-    "nodes": [
-      "dist/src/nodes/Tibber/Tibber.node.js"
-    ]
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=8.0.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",

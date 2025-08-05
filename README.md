@@ -49,6 +49,16 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.2 (2025-08-05)
+- Added Node.js engine requirements (>=20.0.0) to package.json
+- Resolved npm engine warnings by specifying minimum Node.js version
+- Added npm version requirement (>=8.0.0) for better compatibility
+
+### 1.1.1 (2025-08-05)
+- Removed conflicting n8n configuration section from package.json
+- Fixed package loading issues by using single main.js entry point approach
+- Resolved dual configuration that was preventing n8n from properly loading the community node
+
 ### 1.1.0 (2025-08-05)
 - Updated main.ts to use ES6 import/export syntax instead of CommonJS module.exports
 - Changed from exporting node/credential metadata to directly exporting class instances
