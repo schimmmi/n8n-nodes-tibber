@@ -1,0 +1,52 @@
+{
+  "name": "n8n-node-tibber",
+  "version": "1.0.0",
+  "description": "n8n node to access Tibber API data",
+  "keywords": [
+    "n8n",
+    "node",
+    "tibber",
+    "energy",
+    "smart home"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Jürgen Schilling",
+    "email": "alschimmi@googlemail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schimmmi/n8n-node-tibber.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "format": "prettier --write .",
+    "lint": "eslint --ext .ts --fix .",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/TibberApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Tibber/Tibber.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/luxon": "^3.7.1",
+    "n8n-core": "^1.14.1",
+    "n8n-workflow": "^1.82.0",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "graphql-request": "^7.2.0"
+  }
+}
