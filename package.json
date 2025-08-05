@@ -21,11 +21,20 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
+    "build": "npx tsc",
+    "build:watch": "npx tsc --watch",
+    "dev": "npx tsc --watch",
     "format": "prettier --write .",
     "lint": "eslint --ext .ts --fix .",
-    "prepublishOnly": "npm run build"
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Add tests here\" && exit 0",
+    "publish:test": "npm publish --dry-run",
+    "publish:patch": "npm version patch && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:major": "npm version major && npm publish"
   },
   "files": [
     "dist"
