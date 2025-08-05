@@ -1,4 +1,4 @@
-# n8n-node-tibber
+# n8n-nodes-tibber
 
 This is an n8n node to access the Tibber API. It allows you to fetch data from your Tibber account, including home information, consumption data, and price information.
 
@@ -9,13 +9,13 @@ This is an n8n node to access the Tibber API. It allows you to fetch data from y
 ### In n8n Desktop or Cloud
 1. Go to **Settings > Community Nodes**
 2. Click on **Install**
-3. Enter `n8n-node-tibber` in the **Name** field
+3. Enter `n8n-nodes-tibber` in the **Name** field
 4. Click **Install**
 
 ### In your own n8n instance
 1. Install the package:
 ```bash
-npm install n8n-node-tibber
+npm install n8n-nodes-tibber
 ```
 2. Restart n8n
 
