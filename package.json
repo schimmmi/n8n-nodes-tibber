@@ -1,13 +1,14 @@
 {
   "name": "n8n-nodes-tibber",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "n8n node to access Tibber API data",
   "keywords": [
     "n8n",
     "node",
     "tibber",
     "energy",
-    "smart home"
+    "smart home",
+    "n8n-community-node-package"
   ],
   "license": "MIT",
   "author": {

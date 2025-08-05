@@ -49,6 +49,10 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.0.1 (2025-08-05)
+- Added n8n-community-node-package keyword for better discoverability
+- Fixed build script to use npx for better package manager compatibility
+
 ### 1.0.0 (2025-08-05)
 - Initial release
 - Support for retrieving home information
