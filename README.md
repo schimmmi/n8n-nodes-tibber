@@ -49,6 +49,18 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.0.4 (2025-08-05)
+- Moved index.ts from src/ to root directory for proper n8n community node structure
+- Updated TypeScript configuration to handle mixed source locations
+
+### 1.0.3 (2025-08-05)
+- Corrected package name to "n8n-nodes-tibber" (with 's') for proper n8n compatibility
+- Updated all references and installation instructions to use correct package name
+
+### 1.0.2 (2025-08-05)
+- Fixed package name to match directory name for proper loading in n8n
+- Updated all references to use consistent package name
+
 ### 1.0.1 (2025-08-05)
 - Added n8n-community-node-package keyword for better discoverability
 - Fixed build script to use npx for better package manager compatibility

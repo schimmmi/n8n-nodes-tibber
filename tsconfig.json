@@ -5,13 +5,12 @@
     "moduleResolution": "node",
     "target": "es2019",
     "outDir": "./dist",
-    "rootDir": "./src",
     "declaration": true,
     "esModuleInterop": true,
     "sourceMap": true,
     "skipLibCheck": true,
     "lib": ["es2019", "es2020", "es2022.error"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "index.ts"],
   "exclude": ["node_modules/**/*", "**/*.spec.ts"]
 }
