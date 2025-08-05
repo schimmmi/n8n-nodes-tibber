@@ -49,6 +49,20 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.0 (2025-08-05)
+- Updated main.ts to use ES6 import/export syntax instead of CommonJS module.exports
+- Changed from exporting node/credential metadata to directly exporting class instances
+- Improved compatibility with modern n8n community node standards
+
+### 1.0.9 (2025-08-05)
+- Renamed index.ts to main.ts to follow n8n community node naming convention
+- Updated package.json main and types fields to point to dist/main.js and dist/main.d.ts
+- Updated TypeScript configuration to include main.ts instead of index.ts
+
+### 1.0.8 (2025-08-05)
+- Fixed sourcePath references in index.ts to correctly point to compiled JavaScript files
+- Resolved package loading issues by ensuring consistent file path references
+
 ### 1.0.7 (2025-08-05)
 - Fixed n8n configuration paths in package.json to match actual compiled file structure
 - Corrected credentials and nodes paths to use dist/src/ prefix for proper package loading
