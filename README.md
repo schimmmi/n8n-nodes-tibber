@@ -49,6 +49,11 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.6 (2025-08-06)
+- Fixed node export format to export class constructors instead of instantiated objects
+- Resolved "The specified package does not contain any nodes" error by using proper n8n export format
+- N8n now correctly recognizes and loads the Tibber nodes from the package
+
 ### 1.1.5 (2025-08-06)
 - Fixed gulp commands in package.json scripts to use npx for proper local package execution
 - Resolved "gulp: not found" error when using pnpm by ensuring gulp is called via npx
