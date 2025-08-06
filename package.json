@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-tibber",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "n8n node to access Tibber API data",
   "keywords": [
     "n8n",
@@ -19,15 +19,16 @@
     "type": "git",
     "url": "git+https://github.com/schimmmi/n8n-nodes-tibber.git"
   },
-  "main": "dist/main.js",
+  "main": "index.js",
   "types": "dist/main.d.ts",
   "scripts": {
-    "build": "npx tsc",
+    "build": "gulp build",
+    "build:tsc": "npx tsc",
     "build:watch": "npx tsc --watch",
-    "dev": "npx tsc --watch",
+    "dev": "gulp dev",
     "format": "prettier --write .",
     "lint": "eslint --ext .ts --fix .",
-    "clean": "rm -rf dist",
+    "clean": "gulp clean",
     "prebuild": "npm run clean",
     "prepack": "npm run build",
     "prepublishOnly": "npm run build",
@@ -47,6 +48,9 @@
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/luxon": "^3.7.1",
+    "gulp": "^5.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "n8n-core": "^1.14.1",
     "n8n-workflow": "^1.82.0",
     "typescript": "^5.9.2"

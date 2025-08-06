@@ -49,6 +49,18 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.4 (2025-08-06)
+- Added missing gulpfile.js for build automation with gulp tasks
+- Created index.js as main entry point that exports from compiled main.js
+- Updated package.json main field to use index.js instead of dist/main.js
+- Added gulp-based build system with TypeScript compilation and asset copying
+- Installed gulp, gulp-typescript, and gulp-clean as development dependencies
+
+### 1.1.3 (2025-08-06)
+- Fixed node export structure to export instantiated objects instead of class constructors
+- Resolved "The specified package does not contain any nodes" error by properly instantiating TibberNode and TibberApi classes
+- N8n can now properly detect and load the Tibber nodes from the package
+
 ### 1.1.2 (2025-08-05)
 - Added Node.js engine requirements (>=20.0.0) to package.json
 - Resolved npm engine warnings by specifying minimum Node.js version
