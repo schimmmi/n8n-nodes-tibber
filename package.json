@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-tibber",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "n8n node to access Tibber API data",
   "keywords": [
     "n8n",
@@ -22,13 +22,13 @@
   "main": "index.js",
   "types": "dist/main.d.ts",
   "scripts": {
-    "build": "gulp build",
+    "build": "npx gulp build",
     "build:tsc": "npx tsc",
     "build:watch": "npx tsc --watch",
-    "dev": "gulp dev",
+    "dev": "npx gulp dev",
     "format": "prettier --write .",
     "lint": "eslint --ext .ts --fix .",
-    "clean": "gulp clean",
+    "clean": "npx gulp clean",
     "prebuild": "npm run clean",
     "prepack": "npm run build",
     "prepublishOnly": "npm run build",

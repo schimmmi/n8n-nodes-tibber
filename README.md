@@ -49,6 +49,11 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.5 (2025-08-06)
+- Fixed gulp commands in package.json scripts to use npx for proper local package execution
+- Resolved "gulp: not found" error when using pnpm by ensuring gulp is called via npx
+- Improved compatibility with different package managers (npm, yarn, pnpm)
+
 ### 1.1.4 (2025-08-06)
 - Added missing gulpfile.js for build automation with gulp tasks
 - Created index.js as main entry point that exports from compiled main.js
