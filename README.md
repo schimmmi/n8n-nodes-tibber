@@ -49,6 +49,11 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.9 (2025-08-11)
+- Simplified n8n package configuration to resolve "The specified package could not be loaded" error
+- Removed explicit nodes and credentials paths from n8n section, relying on main entry point approach
+- Fixed potential configuration conflicts that could prevent n8n from loading the community package
+
 ### 1.1.8 (2025-08-11)
 - Version increment to resolve npm publish conflict with previously published version 1.1.7
 - No functional changes, package ready for republishing to npm registry

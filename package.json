@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-tibber",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "n8n node to access Tibber API data",
   "keywords": [
     "n8n",
@@ -23,13 +23,7 @@
   "types": "dist/main.d.ts",
 
   "n8n": {
-    "n8nNodesApiVersion": "1",
-    "credentials": [
-      "dist/src/credentials/TibberApi.credentials.js"
-    ],
-    "nodes": [
-      "dist/src/nodes/Tibber/Tibber.node.js"
-    ]
+    "n8nNodesApiVersion": "1"
   },
 
   "scripts": {
