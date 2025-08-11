@@ -21,6 +21,11 @@
   },
   "main": "index.js",
   "types": "dist/main.d.ts",
+
+  "n8n": {
+    "n8nNodesApiVersion": "1"
+  },
+
   "scripts": {
     "build": "npx gulp build",
     "build:tsc": "npx tsc",
@@ -57,5 +62,9 @@
   },
   "dependencies": {
     "graphql-request": "^7.2.0"
+  },
+  "peerDependencies": {
+    "n8n-core": ">=1.0.0",
+    "n8n-workflow": ">=1.0.0"
   }
 }
