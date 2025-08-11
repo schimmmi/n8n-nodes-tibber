@@ -22,8 +22,8 @@ export class TibberNode implements INodeType {
 			name: 'Tibber',
 		},
 		// n8n node connection types
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs: ['main'],
+		outputs: ['main'],
 		credentials: [
 			{
 				name: 'tibberApi',

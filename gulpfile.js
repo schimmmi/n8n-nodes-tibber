@@ -1,14 +1,24 @@
 const path = require('path');
 const { task, src, dest, series } = require('gulp');
 const clean = require('gulp-clean');
+const ts = require('gulp-typescript');
+
+const tsProject = ts.createProject('tsconfig.json');
 
 task('clean', cleanDist);
+task('build:tsc', buildTypeScript);
 task('build:icons', copyIcons);
-task('build', series('clean', 'build:icons'));
+task('build', series('clean', 'build:tsc', 'build:icons'));
 
 function cleanDist() {
 	return src('dist', { read: false, allowEmpty: true })
 		.pipe(clean());
+}
+
+function buildTypeScript() {
+	return tsProject.src()
+		.pipe(tsProject())
+		.pipe(dest('dist'));
 }
 
 function copyIcons() {

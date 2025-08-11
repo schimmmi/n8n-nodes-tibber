@@ -49,6 +49,17 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.11 (2025-08-11)
+- Fixed build system by adding TypeScript compilation to gulp build process
+- Resolved compilation errors related to NodeConnectionType usage in Tibber.node.ts
+- Updated gulpfile.js to include build:tsc task for proper TypeScript compilation
+- Ensured all compiled JavaScript files are properly generated in dist directory
+
+### 1.1.10 (2025-08-11)
+- Updated n8n package configuration to point to individual compiled node and credential files
+- Fixed package structure to follow n8n documentation requirements for file organization
+- Corrected paths in package.json to reference dist/src/nodes/Tibber/Tibber.node.js and dist/src/credentials/TibberApi.credentials.js
+
 ### 1.1.9 (2025-08-11)
 - Simplified n8n package configuration to resolve "The specified package could not be loaded" error
 - Removed explicit nodes and credentials paths from n8n section, relying on main entry point approach
