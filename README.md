@@ -49,6 +49,12 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.17 (2025-08-11)
+- Fixed package loading issue by removing conflicting n8n configuration
+- Resolved dual configuration conflict between main entry point and explicit n8n paths
+- Package now uses consistent main entry point approach for reliable loading in n8n
+- Eliminated "The specified package could not be loaded" error caused by configuration conflicts
+
 ### 1.1.16 (2025-08-11)
 - Fixed gulp-sourcemaps module not found error during build process
 - Resolved dependency resolution issues that prevented build from completing

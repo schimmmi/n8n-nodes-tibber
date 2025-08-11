@@ -1,16 +1,3 @@
-module.exports = {
-	nodes: [
-		{
-			packageName: 'n8n-nodes-tibber',
-			nodeClass: 'Tibber',
-			sourcePath: './dist/nodes/Tibber/Tibber.node.js',
-		},
-	],
-	credentials: [
-		{
-			packageName: 'n8n-nodes-tibber',
-			credentialClass: 'TibberApi',
-			sourcePath: './dist/credentials/TibberApi.credentials.js',
-		},
-	],
-};
+// Empty entry for n8n community package v1.
+// Registration is driven by package.json "n8n" fields.
+export {};

@@ -1,36 +1,23 @@
 {
   "name": "n8n-nodes-tibber",
-  "version": "1.1.16",
+  "version": "1.1.17",
   "description": "n8n node to access Tibber API data",
-  "keywords": [
-    "n8n",
-    "node",
-    "tibber",
-    "energy",
-    "smart home",
-    "n8n-community-node-package"
-  ],
+  "keywords": ["n8n","node","tibber","energy","smart home","n8n-community-node-package"],
   "license": "MIT",
   "homepage": "https://github.com/schimmmi/n8n-nodes-tibber",
-  "author": {
-    "name": "Jürgen Schilling",
-    "email": "alschimmi@googlemail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/schimmmi/n8n-nodes-tibber.git"
-  },
-  "main": "index.js",
+  "author": { "name": "Jürgen Schilling", "email": "alschimmi@googlemail.com" },
+  "repository": { "type": "git", "url": "git+https://github.com/schimmmi/n8n-nodes-tibber.git" },
+
+  "type": "commonjs",
+  "main": "dist/index.js",
   "types": "dist/main.d.ts",
+
   "n8n": {
     "n8nNodesApiVersion": "1",
-    "credentials": [
-      "dist/credentials/TibberApi.credentials.js"
-    ],
-    "nodes": [
-      "dist/nodes/Tibber/Tibber.node.js"
-    ]
+    "nodes": ["dist/nodes/Tibber/Tibber.node.js"],
+    "credentials": ["dist/credentials/TibberApi.credentials.js"]
   },
+
   "scripts": {
     "build": "npx gulp build",
     "build:tsc": "npx tsc",
@@ -48,14 +35,11 @@
     "publish:minor": "npm version minor && npm publish",
     "publish:major": "npm version major && npm publish"
   },
-  "files": [
-    "dist",
-    "index.js"
-  ],
-  "engines": {
-    "node": ">=20.0.0",
-    "npm": ">=8.0.0"
-  },
+
+  "files": ["dist"],
+
+  "engines": { "node": ">=20.0.0", "npm": ">=8.0.0" },
+
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/luxon": "^3.7.1",
@@ -63,15 +47,15 @@
     "gulp-clean": "^0.4.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
-    "n8n-core": "^1.14.1",
-    "n8n-workflow": "^1.82.0",
     "typescript": "^5.9.2"
   },
-  "dependencies": {
-    "graphql-request": "^7.2.0"
-  },
+
   "peerDependencies": {
     "n8n-core": ">=1.0.0",
     "n8n-workflow": ">=1.0.0"
+  },
+
+  "dependencies": {
+    "graphql-request": "^7.2.0"
   }
 }

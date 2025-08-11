@@ -249,14 +249,12 @@ export class TibberNode implements INodeType {
 		const credentials = await this.getCredentials('tibberApi');
 		const apiToken = credentials.apiToken as string;
 		
-		// Initialize GraphQL client
-		const endpoint = 'https://api.tibber.com/v1-beta/gql';
-		const client = new GraphQLClient(endpoint, {
-			headers: {
-				Authorization: `Bearer ${apiToken}`,
-			},
-		});
+        // type-only import works under CJS, it erases at runtime
+        import type { GraphQLClient as GraphQLClientType } from 'graphql-request';
 
+        // later, after dynamic import:
+        const { GraphQLClient, gql } = await import('graphql-request');
+        const client: GraphQLClientType = new GraphQLClient(endpoint, { headers: { Authorization: `Bearer ${apiToken}` } });
 		try {
 			// Execute operations based on resource and operation
 			if (resource === 'home') {
