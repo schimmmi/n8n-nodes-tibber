@@ -2,6 +2,7 @@ const path = require('path');
 const { task, src, dest, series } = require('gulp');
 const clean = require('gulp-clean');
 const ts = require('gulp-typescript');
+const sourcemaps = require('gulp-sourcemaps');
 
 const tsProject = ts.createProject('tsconfig.json');
 
@@ -17,9 +18,16 @@ function cleanDist() {
 }
 
 function buildTypeScript() {
-	return tsProject.src()
-		.pipe(tsProject())
-		.pipe(dest('dist'));
+	const tsResult = tsProject.src()
+		.pipe(sourcemaps.init())
+		.pipe(tsProject());
+	
+	return tsResult.js
+		.pipe(sourcemaps.write('.'))
+		.pipe(dest('dist'))
+		.on('end', () => {
+			tsResult.dts.pipe(dest('dist'));
+		});
 }
 
 function copyIcons() {

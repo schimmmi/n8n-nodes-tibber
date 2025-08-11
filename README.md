@@ -49,6 +49,12 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.15 (2025-08-11)
+- Added source map generation (.map files) to the build process
+- Installed gulp-sourcemaps dependency for proper source map handling
+- Modified gulpfile.js TypeScript compilation to generate source maps alongside compiled JavaScript files
+- Source maps now available in dist directory for better debugging support
+
 ### 1.1.14 (2025-08-11)
 - Version increment for package maintenance
 
