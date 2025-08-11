@@ -23,7 +23,13 @@
   "types": "dist/main.d.ts",
 
   "n8n": {
-    "n8nNodesApiVersion": "1"
+    "n8nNodesApiVersion": "1",
+    "credentials": [
+      "dist/src/credentials/TibberApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/src/nodes/Tibber/Tibber.node.js"
+    ]
   },
 
   "scripts": {

@@ -49,6 +49,11 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.7 (2025-08-11)
+- Fixed n8n package configuration by adding explicit nodes and credentials paths
+- Resolved "The specified package does not contain any nodes" error by properly configuring the n8n section in package.json
+- N8n can now correctly discover and load the Tibber nodes and credentials from the package
+
 ### 1.1.6 (2025-08-06)
 - Fixed node export format to export class constructors instead of instantiated objects
 - Resolved "The specified package does not contain any nodes" error by using proper n8n export format
