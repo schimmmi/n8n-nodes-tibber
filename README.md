@@ -49,6 +49,11 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.16 (2025-08-11)
+- Fixed gulp-sourcemaps module not found error during build process
+- Resolved dependency resolution issues that prevented build from completing
+- Build process now works correctly with both npm and pnpm package managers
+
 ### 1.1.15 (2025-08-11)
 - Added source map generation (.map files) to the build process
 - Installed gulp-sourcemaps dependency for proper source map handling
