@@ -49,6 +49,9 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.14 (2025-08-11)
+- Version increment for package maintenance
+
 ### 1.1.13 (2025-08-11)
 - Restructured project by moving credentials and nodes directories from src/ to root level
 - Removed src/ directory entirely as requested to simplify project structure
