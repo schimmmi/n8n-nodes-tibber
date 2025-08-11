@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-tibber",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "n8n node to access Tibber API data",
   "keywords": [
     "n8n",
@@ -11,6 +11,7 @@
     "n8n-community-node-package"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/schimmmi/n8n-nodes-tibber",
   "author": {
     "name": "Jürgen Schilling",
     "email": "alschimmi@googlemail.com"
@@ -23,7 +24,13 @@
   "types": "dist/main.d.ts",
 
   "n8n": {
-    "n8nNodesApiVersion": "1"
+    "n8nNodesApiVersion": "1",
+    "nodes": [
+      "dist/src/nodes/Tibber/Tibber.node.js"
+    ],
+    "credentials": [
+      "dist/src/credentials/TibberApi.credentials.js"
+    ]
   },
 
   "scripts": {

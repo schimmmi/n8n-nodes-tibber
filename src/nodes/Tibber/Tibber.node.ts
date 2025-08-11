@@ -1,5 +1,6 @@
 import {
 	IExecuteFunctions,
+    NodeConnectionType,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
@@ -21,8 +22,8 @@ export class TibberNode implements INodeType {
 			name: 'Tibber',
 		},
 		// n8n node connection types
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: [NodeConnectionType.Main],
+		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
 				name: 'tibberApi',
