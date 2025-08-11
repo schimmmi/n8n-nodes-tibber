@@ -1,6 +1,5 @@
 import {
 	IExecuteFunctions,
-    NodeConnectionType,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
@@ -249,12 +248,28 @@ export class TibberNode implements INodeType {
 		const credentials = await this.getCredentials('tibberApi');
 		const apiToken = credentials.apiToken as string;
 		
-        // type-only import works under CJS, it erases at runtime
-        import type { GraphQLClient as GraphQLClientType } from 'graphql-request';
+        // 1) Dynamic import of ESM module from CJS context
+        const { GraphQLClient } = (await import('graphql-request')) as typeof import('graphql-request');
 
-        // later, after dynamic import:
-        const { GraphQLClient, gql } = await import('graphql-request');
-        const client: GraphQLClientType = new GraphQLClient(endpoint, { headers: { Authorization: `Bearer ${apiToken}` } });
+        // 2) Define endpoint BEFORE you use it
+        const endpoint = 'https://api.tibber.com/v1-beta/gql';
+
+        // 3) Create client
+        const client = new GraphQLClient(endpoint, {
+          headers: { Authorization: `Bearer ${apiToken}` },
+        });
+
+        // 4) Use a plain string for the GraphQL query (no gql tag needed)
+        const query = /* GraphQL */ `
+          query Viewer {
+            viewer {
+              name
+            }
+          }
+        `;
+
+        // 5) Make the request
+        const data = await client.request(query);
 		try {
 			// Execute operations based on resource and operation
 			if (resource === 'home') {
