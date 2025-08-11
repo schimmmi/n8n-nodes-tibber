@@ -49,6 +49,20 @@ Set up a workflow to record your energy consumption data to a database for long-
 
 ## Version History
 
+### 1.1.13 (2025-08-11)
+- Restructured project by moving credentials and nodes directories from src/ to root level
+- Removed src/ directory entirely as requested to simplify project structure
+- Updated all file references and imports to reflect new directory layout
+- Modified main.ts, index.js, gulpfile.js, and tsconfig.json to use new paths
+- Added package.json copying to dist directory during build process
+- Updated TypeScript configuration for incremental builds
+
+### 1.1.12 (2025-08-11)
+- Fixed package loading issue by resolving configuration conflicts between main entry point and n8n section
+- Added index.js to files array in package.json to ensure main entry point is included in package
+- Removed conflicting nodes and credentials paths from n8n configuration to rely on main entry point
+- Resolved "The specified package could not be loaded" error by using consistent package structure
+
 ### 1.1.11 (2025-08-11)
 - Fixed build system by adding TypeScript compilation to gulp build process
 - Resolved compilation errors related to NodeConnectionType usage in Tibber.node.ts

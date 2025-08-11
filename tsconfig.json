@@ -9,8 +9,10 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "lib": ["es2019", "es2020", "es2022.error"]
+    "lib": ["es2019", "es2020", "es2022.error"],
+    "composite": true,
+    "incremental": true
   },
-  "include": ["src/**/*", "main.ts"],
+  "include": ["credentials/**/*", "nodes/**/*", "main.ts", "types.d.ts"],
   "exclude": ["node_modules/**/*", "**/*.spec.ts"]
 }
